@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.lifestyle.angus.life_style"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'com.google.android.gms:play-services:8.1.0'
+    compile files('libs/baidumapapi_base_v3_6_0.jar')
+    compile files('libs/baidumapapi_cloud_v3_6_0.jar')
+    compile files('libs/baidumapapi_map_v3_6_0.jar')
+    compile files('libs/baidumapapi_radar_v3_6_0.jar')
+    compile files('libs/baidumapapi_search_v3_6_0.jar')
+    compile files('libs/baidumapapi_util_v3_6_0.jar')
+    compile files('libs/locSDK_6.12.jar')
+}

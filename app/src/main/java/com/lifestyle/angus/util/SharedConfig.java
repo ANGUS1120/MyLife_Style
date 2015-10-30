@@ -1,0 +1,26 @@
+package com.lifestyle.angus.util;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+/**
+ * Created by ANGUS on 2015/10/29.
+ */
+//获得软件的全局配置文件
+public class SharedConfig {
+    Context context;
+    SharedPreferences shared;
+
+    public SharedConfig(Context context) {
+        this.context = context;
+        shared = context.getSharedPreferences("config", Context.MODE_PRIVATE);
+    }
+
+    public SharedPreferences GetConfig() {
+        return shared;
+    }
+
+    public void ClearConfig() {
+        shared.edit().clear().commit();
+    }
+}
